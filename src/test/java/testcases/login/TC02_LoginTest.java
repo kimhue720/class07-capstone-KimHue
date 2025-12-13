@@ -14,7 +14,7 @@ public class TC02_LoginTest extends BaseTest {
     HomePage homePage;
 
     @Test
-    public void testSuccesLogin() {
+    public void testSuccessLogin() {
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
 
