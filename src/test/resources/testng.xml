@@ -6,7 +6,7 @@
     </listeners>
     <test name="Register Test" parallel="false" thread-count="2">
         <classes>
-            <class name="testcases.register.TC01_RegisterTest" />
+            <class name="testcases.register.TC01_RegisterTestsucess" />
             <class name="testcases.login.TC01_LoginTest" />
             <class name="testcases.login.TC02_LoginTestFailPassword" />
             <class name="testcases.login.TC03_LoginTestFailAccount" />

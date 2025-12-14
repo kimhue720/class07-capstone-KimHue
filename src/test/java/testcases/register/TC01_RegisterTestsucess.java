@@ -1,11 +1,7 @@
 package testcases.register;
 
 import base.BaseTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
@@ -14,7 +10,7 @@ import reports.ExtentReportManager;
 
 import java.util.UUID;
 
-public class TC01_RegisterTest extends BaseTest {
+public class TC01_RegisterTestsucess extends BaseTest {
 
     //khoi tao page
     RegisterPage registerPage;
