@@ -12,6 +12,7 @@ public class RegisterPage extends CommonPage {
     private By byTxtEmail = By.id("email");;
     private By byBtnRegister = By.xpath("//button[.='Đăng ký']");;
     private By byLblRegisterMsg = By.id("swal2-title");;
+    private By byLblEmailErrorMsg = By.id("email-helper-text");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
@@ -43,5 +44,8 @@ public class RegisterPage extends CommonPage {
 
     public String getMessage() {
         return getText(byLblRegisterMsg);
+    }
+
+    public String getEmailErrorMessage() {return getText(byLblEmailErrorMsg);
     }
 }

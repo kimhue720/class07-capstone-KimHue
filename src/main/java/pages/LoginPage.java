@@ -9,7 +9,7 @@ public class LoginPage extends CommonPage {
     private By byTxtPasswordLogin = By.id("matKhau");;
     private By byBtnLogin = By.xpath("//button[.='Đăng nhập']");;
     private By byLblLoginMsg = By.id("swal2-title");;
-    private By byLblLoginfailMsg = By.xpath("//p[@id='matKhau-helper-text']");;
+    private By byLblLoginfailpasswordMsg = By.xpath("//p[@id='matKhau-helper-text']");;
     private By byLblLoginfailaccountMsg = By.xpath("//p[@id='taiKhoan-helper-text']");;
 
     public LoginPage(WebDriver driver) {
@@ -38,7 +38,7 @@ public class LoginPage extends CommonPage {
 
     public String getMessageErrorPassword() {
         LOG.info("getMessageFail");
-        return getText(byLblLoginfailMsg);
+        return getText(byLblLoginfailpasswordMsg);
     }
 
     public String getMessageErrorAccount() {

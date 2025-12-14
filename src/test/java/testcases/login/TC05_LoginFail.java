@@ -7,14 +7,14 @@ import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class TC03_LoginTestFail extends BaseTest {
+public class TC05_LoginFail extends BaseTest {
 
     //class variable
     LoginPage loginPage;
     HomePage homePage;
 
     @Test
-    public void testinValidLogin() {
+    public void testfailLogin() {
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
 
@@ -26,18 +26,17 @@ public class TC03_LoginTestFail extends BaseTest {
         //Step 2: Click 'Đăng Nhập' link
         homePage.navigateLoginPage();
 
-        //Step 3: Enter account
-        String newAcount = "kimhue@gmail.com";
-        loginPage.enterAccount(newAcount);
-
-        //Step 4: Click login
+        //Step 3: Click login
         loginPage.clickLogin();
 
-        //Step 5: Verify login fail
+        //Step 4: Verify login fail
         //VP1: "Đây là trường bắt buộc !" message displays
-        String actualLoginfailMsg = loginPage.getMessageErrorPassword();
-        Assert.assertEquals(actualLoginfailMsg, "Đây là trường bắt buộc !", "Login fail");
+        String actualLoginfailaccountMsg = loginPage.getMessageErrorAccount();
+        Assert.assertEquals(actualLoginfailaccountMsg, "Đây là trường bắt buộc !", "Login fail");
 
+        //VP2: "Đây là trường bắt buộc !" message displays
+        String actualLoginfailpasswordMsg = loginPage.getMessageErrorPassword();
+        Assert.assertEquals(actualLoginfailpasswordMsg, "Đây là trường bắt buộc !", "Login fail");
     }
 
 }

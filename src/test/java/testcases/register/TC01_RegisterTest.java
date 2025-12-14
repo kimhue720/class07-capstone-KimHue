@@ -40,7 +40,7 @@ public class TC01_RegisterTest extends BaseTest {
         //Step 2: Enter value on 'Tai khoan' textbox
         ExtentReportManager.info("Step 2: Enter value on 'Tai khoan' textbox");
         LOG.info("Step 2: Enter value on 'Tai khoan' textbox");
-        String account = "Test" + UUID.randomUUID();
+        String account = "Kim Huệ" + UUID.randomUUID();
         String newAcount = account.replace("-", "");
         LOG.info(newAcount);
         registerPage.enterAccount(newAcount);
@@ -48,22 +48,22 @@ public class TC01_RegisterTest extends BaseTest {
         //Step 3: Enter value on 'Mat Khau' textbox
         ExtentReportManager.info("Step 3: Enter value on 'Mat Khau' textbox");
         LOG.info("Step 3: Enter value on 'Mat Khau' textbox");
-        registerPage.enterPassword("Test123456@");
+        registerPage.enterPassword("123456");
 
         //Step 4: Enter value on 'Nhap Lai Mat Khau' textbox
         ExtentReportManager.info("Step 4: Enter value on 'Nhap Lai Mat Khau' textbox");
         LOG.info("Step 4: Enter value on 'Nhap Lai Mat Khau' textbox");
-        registerPage.enterConfirmPassword("Test123456@");
+        registerPage.enterConfirmPassword("123456");
 
         //Step 5: Enter value on 'Ho ten' textbox
         ExtentReportManager.info("Step 5: Enter value on 'Ho ten' textbox");
         LOG.info("Step 5: Enter value on 'Ho ten' textbox");
-        registerPage.enterName("John Kenny");
+        registerPage.enterName("Kim Huệ");
 
         //Step 6: Enter value on 'Email' textbox
         ExtentReportManager.info("Step 6: Enter value on 'Email' textbox");
         LOG.info("Step 6: Enter value on 'Email' textbox");
-        String email = newAcount + "@example.com";
+        String email = newAcount + "@gmail.com";
         registerPage.enterEmail(email);
 
         //Step 7: Click 'Dang Ky' button
@@ -89,9 +89,9 @@ public class TC01_RegisterTest extends BaseTest {
         //Enter account
         //Low Level Action --> High Level Action (Business action)
 //        loginPage.enterAccount(newAcount);
-//        loginPage.enterPassword("Test123456@");
+//        loginPage.enterPassword("123456");
 //        loginPage.clickLogin();
-        loginPage.login(newAcount, "Test123456@");
+        loginPage.login(newAcount, "123456");
 
         ExtentReportManager.info("VP1: \"Đăng nhập thành công\" message displays");
         LOG.info("VP1: \"Đăng nhập thành công\" message displays");
@@ -103,7 +103,7 @@ public class TC01_RegisterTest extends BaseTest {
         LOG.info("VP2: User profile name displays");
         //VP2: User profile name displays
         String actualDisplayName = homePage.getUserProfileName();
-        Assert.assertEquals(actualDisplayName, "John Kenny", "User Profile name");
+        Assert.assertEquals(actualDisplayName, "Kim Huệ", "User Profile name");
 
     }
 }
