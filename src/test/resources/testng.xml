@@ -7,11 +7,13 @@
     <test name="Register Test" parallel="false" thread-count="2">
         <classes>
             <class name="testcases.register.TC01_RegisterTest" />
-            <class name="testcases.login.TC02_LoginTest" />
-            <class name="testcases.login.TC03_LoginTestFailPassword" />
-            <class name="testcases.login.TC04_LoginTestFailAccount" />
-            <class name="testcases.login.TC05_LoginFail" />
-            <class name="testcases.register.TC06_RegisterFailEmptyEmail" />
+            <class name="testcases.login.TC01_LoginTest" />
+            <class name="testcases.login.TC02_LoginTestFailPassword" />
+            <class name="testcases.login.TC03_LoginTestFailAccount" />
+            <class name="testcases.login.TC04_LoginFail" />
+            <class name="testcases.register.TC02_RegisterFailEmptyEmail" />
+            <class name="testcases.register.TC03_RegisterFailPasswordMismatch" />
+            <class name="testcases.register.TC04_RegisterFailEmptyAllFields" />
         </classes>
     </test>
 </suite>

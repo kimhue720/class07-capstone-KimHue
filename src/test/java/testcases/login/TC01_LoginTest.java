@@ -7,7 +7,7 @@ import org.testng.annotations.*;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class TC02_LoginTest extends BaseTest {
+public class TC01_LoginTest extends BaseTest {
 
     //class variable
     LoginPage loginPage;

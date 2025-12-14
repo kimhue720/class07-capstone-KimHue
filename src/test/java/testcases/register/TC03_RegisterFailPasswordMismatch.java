@@ -8,13 +8,13 @@ import pages.RegisterPage;
 
 import java.util.UUID;
 
-public class TC06_RegisterFailEmptyEmail extends BaseTest {
+public class TC03_RegisterFailPasswordMismatch extends BaseTest {
 
     RegisterPage registerPage;
     HomePage homePage;
 
     @Test
-    public void testRegisterFailEmptyEmail() {
+    public void testRegisterFailPasswordMismatch() {
 
         registerPage = new RegisterPage(driver);
         homePage = new HomePage(driver);
@@ -32,24 +32,25 @@ public class TC06_RegisterFailEmptyEmail extends BaseTest {
         // Step 4: Enter password
         registerPage.enterPassword("123456");
 
-        // Step 5: Enter confirm password
-        registerPage.enterConfirmPassword("123456");
+        // Step 5: Enter confirm password (DIFFERENT)
+        registerPage.enterConfirmPassword("1234567");
 
         // Step 6: Enter full name
         registerPage.enterName("Kim Huệ");
 
-        // Step 7: DO NOT enter email
+        // Step 7: Enter valid email
+        registerPage.enterEmail(account + "@gmail.com");
 
         // Step 8: Click Register
         registerPage.clickRegister();
 
-        // Step 9: Verify error message at Email field
-        String actualEmailErrorMsg = registerPage.getEmailErrorMessage();
+        // Step 9: Verify error message at Confirm Password field
+        String actualConfirmPasswordErrorMsg =
+                registerPage.getConfirmPasswordErrorMessage();
 
-        Assert.assertEquals(
-                actualEmailErrorMsg,
-                "Đây là trường bắt buộc !",
-                "Email error message is incorrect"
+        Assert.assertTrue(
+                actualConfirmPasswordErrorMsg.contains("Mật khẩu không khớp !"),
+                "Confirm password error message is incorrect"
         );
     }
 }

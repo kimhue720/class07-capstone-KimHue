@@ -13,6 +13,10 @@ public class RegisterPage extends CommonPage {
     private By byBtnRegister = By.xpath("//button[.='Đăng ký']");;
     private By byLblRegisterMsg = By.id("swal2-title");;
     private By byLblEmailErrorMsg = By.id("email-helper-text");
+    private By byLblConfirmPasswordErrorMsg = By.id("confirmPassWord-helper-text");
+    private By byLblAccountErrorMsg = By.id("taiKhoan-helper-text");
+    private By byLblPasswordErrorMsg = By.id("matKhau-helper-text");
+    private By byLblNameErrorMsg = By.id("hoTen-helper-text");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
@@ -46,6 +50,20 @@ public class RegisterPage extends CommonPage {
         return getText(byLblRegisterMsg);
     }
 
-    public String getEmailErrorMessage() {return getText(byLblEmailErrorMsg);
+    public String getEmailErrorMessage() {return getText(byLblEmailErrorMsg); }
+
+    public String getConfirmPasswordErrorMessage() {return getText(byLblConfirmPasswordErrorMsg); }
+
+    public String getAccountErrorMessage() {
+        return getText(byLblAccountErrorMsg);
     }
-}
+
+    public String getPasswordErrorMessage() {
+        return getText(byLblPasswordErrorMsg);
+    }
+
+    public String getNameErrorMessage() {
+        return getText(byLblNameErrorMsg);
+    }
+    }
+
