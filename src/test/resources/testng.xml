@@ -14,6 +14,7 @@
             <class name="testcases.register.TC02_RegisterFailEmptyEmail" />
             <class name="testcases.register.TC03_RegisterFailPasswordMismatch" />
             <class name="testcases.register.TC04_RegisterFailEmptyAllFields" />
+            <class name="testcases.register.TC05_RegisterFailDuplicateAccount" />
         </classes>
     </test>
 </suite>
