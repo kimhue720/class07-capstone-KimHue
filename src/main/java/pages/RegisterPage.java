@@ -18,6 +18,8 @@ public class RegisterPage extends CommonPage {
     private By byLblPasswordErrorMsg = By.id("matKhau-helper-text");
     private By byLblNameErrorMsg = By.id("hoTen-helper-text");
     private By byDuplicateAccountMessage = By.cssSelector(".MuiAlert-message");
+    private By byDuplicateEmailMessage =
+            By.xpath("//div[contains(@class,'MuiAlert-message') and contains(text(),'Email đã tồn tại')]");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
@@ -68,5 +70,8 @@ public class RegisterPage extends CommonPage {
     }
 
     public String getDuplicateAccountMessage() { return getText(byDuplicateAccountMessage); }
-    }
+
+    public String getDuplicateEmailMessage() { return getText(byDuplicateEmailMessage); }
+
+}
 

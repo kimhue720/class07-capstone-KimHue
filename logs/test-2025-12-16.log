@@ -1,0 +1,168 @@
+[2025-12-16 21:23:03] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-16 21:23:11] [INFO ] TestListener - ===== START TEST: registerFailDuplicateAccount =====
+[2025-12-16 21:23:31] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-16 21:23:31] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-16 21:23:31] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with kimhue123
+[2025-12-16 21:23:31] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-16 21:23:32] [INFO ] RegisterPage - sendKeys: By.id: matKhau with 123456
+[2025-12-16 21:23:32] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-16 21:23:32] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with 123456
+[2025-12-16 21:23:32] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-16 21:23:32] [INFO ] RegisterPage - sendKeys: By.id: hoTen with Kim Huệ
+[2025-12-16 21:23:32] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-16 21:23:32] [INFO ] RegisterPage - sendKeys: By.id: email with kimhue123@gmail.com
+[2025-12-16 21:23:32] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-16 21:23:32] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-16 21:23:32] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-16 21:23:32] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-16 21:23:32] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-16 21:24:03] [ERROR] TestListener - ===== FAILED TEST: registerFailDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.177, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54185}, goog:processID: 1384, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54185/devtoo..., se:cdpVersion: 142.0.7444.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b354f22de56056300e3c4d49559b8cf2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:48)
+	at pages.RegisterPage.getMessage(RegisterPage.java:50)
+	at testcases.register.TC05_RegisterFailDuplicateAccount.registerFailDuplicateAccount(TC05_RegisterFailDuplicateAccount.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:153)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2025-12-16 21:24:05] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-16 21:24:39] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-16 21:24:42] [INFO ] TestListener - ===== START TEST: registerFailDuplicateAccount =====
+[2025-12-16 21:25:03] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-16 21:25:03] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-16 21:25:03] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with kimhue
+[2025-12-16 21:25:03] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-16 21:25:04] [INFO ] RegisterPage - sendKeys: By.id: matKhau with 123456
+[2025-12-16 21:25:04] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-16 21:25:04] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with 123456
+[2025-12-16 21:25:04] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-16 21:25:04] [INFO ] RegisterPage - sendKeys: By.id: hoTen with Kim Huệ
+[2025-12-16 21:25:04] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-16 21:25:04] [INFO ] RegisterPage - sendKeys: By.id: email with kimhue1234@gmail.com
+[2025-12-16 21:25:04] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-16 21:25:04] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-16 21:25:04] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-16 21:25:04] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-16 21:25:04] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-16 21:25:35] [ERROR] TestListener - ===== FAILED TEST: registerFailDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.177, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\PC\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54240}, goog:processID: 7396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54240/devtoo..., se:cdpVersion: 142.0.7444.177, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f013b8ceca739e45b9fa546922cee4b2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:48)
+	at pages.RegisterPage.getMessage(RegisterPage.java:50)
+	at testcases.register.TC05_RegisterFailDuplicateAccount.registerFailDuplicateAccount(TC05_RegisterFailDuplicateAccount.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:153)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+[2025-12-16 21:25:36] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-16 21:31:34] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-16 21:31:36] [INFO ] TestListener - ===== START TEST: registerFailDuplicateAccount =====
+[2025-12-16 21:31:38] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-16 21:31:38] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-16 21:31:39] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with kimhue
+[2025-12-16 21:31:39] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-16 21:31:39] [INFO ] RegisterPage - sendKeys: By.id: matKhau with 123456
+[2025-12-16 21:31:39] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-16 21:31:39] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with 123456
+[2025-12-16 21:31:39] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-16 21:31:39] [INFO ] RegisterPage - sendKeys: By.id: hoTen with Kim Huệ
+[2025-12-16 21:31:39] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-16 21:31:39] [INFO ] RegisterPage - sendKeys: By.id: email with kimhue1234
+[2025-12-16 21:31:39] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-16 21:31:40] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-16 21:31:40] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-16 21:31:40] [INFO ] RegisterPage - getText: By.cssSelector: .MuiAlert-message
+[2025-12-16 21:31:40] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.cssSelector: .MuiAlert-message
+[2025-12-16 21:31:40] [INFO ] TestListener - ===== PASSED TEST: registerFailDuplicateAccount =====
+[2025-12-16 21:31:41] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
