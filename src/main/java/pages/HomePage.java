@@ -7,6 +7,10 @@ public class HomePage extends CommonPage {
 
     private By byLblUserProfile = By.xpath("//a[@href='/account']/h3");;
 
+    private By byFirstMovieCard = By.xpath("(//div[contains(@class,'ant-card')])[1]");
+
+    private By byMovieList = By.xpath("//div[contains(@class,'ant-card')]");
+
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -14,4 +18,13 @@ public class HomePage extends CommonPage {
     public String getUserProfileName() {
         return getText(byLblUserProfile);
     }
+
+    public void clickFirstMovie() { waitForVisibilityOfElementLocated(byFirstMovieCard);
+        click(byFirstMovieCard);
+    }
+
+    public void waitForHomePageLoaded() {
+        waitForVisibilityOfElementLocated(byMovieList);
+    }
+
 }

@@ -7,15 +7,24 @@
     <test name="Register Test" parallel="false" thread-count="2">
         <classes>
             <class name="testcases.register.TC01_RegisterTestsucess" />
-            <class name="testcases.login.TC01_LoginTest" />
-            <class name="testcases.login.TC02_LoginTestFailPassword" />
-            <class name="testcases.login.TC03_LoginTestFailAccount" />
-            <class name="testcases.login.TC04_LoginFail" />
             <class name="testcases.register.TC02_RegisterFailEmptyEmail" />
             <class name="testcases.register.TC03_RegisterFailPasswordMismatch" />
             <class name="testcases.register.TC04_RegisterFailEmptyAllFields" />
             <class name="testcases.register.TC05_RegisterFailDuplicateAccount" />
             <class name="testcases.register.TC06_RegisterFailDuplicateEmail" />
+        </classes>
+    </test>
+    <test name="Login Test" parallel="false" thread-count="2">
+        <classes>
+        <class name="testcases.login.TC01_LoginTest" />
+        <class name="testcases.login.TC02_LoginTestFailPassword" />
+        <class name="testcases.login.TC03_LoginTestFailAccount" />
+        <class name="testcases.login.TC04_LoginFail" />
+        </classes>
+    </test>
+    <test name="Booking Movie" parallel="false" thread-count="2">
+        <classes>
+            <class name="testcases.booking.TC01_BuyTicketSuccess"/>
         </classes>
     </test>
 </suite>
