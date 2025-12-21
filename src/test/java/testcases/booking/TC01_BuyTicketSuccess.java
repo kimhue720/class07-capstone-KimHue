@@ -37,7 +37,7 @@ public class TC01_BuyTicketSuccess extends BaseTest {
         movieDetailPage.selectShowTime();
 
         // Step 5: Chọn ghế
-        bookingPage.selectSeat("42");//nhớ điền các ghế chưa bị đặt rồi
+        bookingPage.selectSeat("86");
         // Step 6: Đặt vé
         bookingPage.clickBookTicket();
     }
