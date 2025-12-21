@@ -5,11 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class BookingPage extends CommonPage {
 
-    // Suất chiếu (link dẫn tới trang chọn ghế)
-    private By byShowTime = By.xpath("//a[contains(@href,'/purchase/')]");
+
 
     // Ghế còn trống (button chưa disabled)
-    private By bySeat = By.xpath("//button[not(@disabled)]");
+    //private By bySeat = By.xpath("//button[not(@disabled)]");
 
     // Nút ĐẶT VÉ
     private By byBtnBookTicket = By.xpath("//span[normalize-space()='ĐẶT VÉ']/ancestor::button");
@@ -18,13 +17,11 @@ public class BookingPage extends CommonPage {
         super(driver);
     }
 
-    // Step 4: chọn suất chiếu
-    public void selectShowTime() {
-        click(byShowTime);
-    }
+
 
     // Step 5: chọn ghế
-    public void selectSeat() {
+    public void selectSeat(String numberSeat) {
+        By bySeat = By.xpath("//button[not(@disabled)][span[contains(text(),'"+numberSeat+"')]]");
         click(bySeat);
     }
 

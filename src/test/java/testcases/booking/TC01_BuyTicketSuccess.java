@@ -22,23 +22,22 @@ public class TC01_BuyTicketSuccess extends BaseTest {
 
         // Step 1: Login
         homePage.navigateLoginPage();
-        loginPage.login("kimhue", "123456");
+        loginPage.login("KimHue93", "Kim123456@");
 
         //  CHỜ HOME LOAD XONG
-        homePage.waitForHomePageLoaded();
+//        homePage.waitForHomePageLoaded();
 
         // Step 2: Chọn phim đầu tiên
         homePage.clickFirstMovie();
 
         // Step 3: Click Mua vé
-        movieDetailPage.clickBuyTicket();
+//        movieDetailPage.clickBuyTicket();
 
         // Step 4: Chọn suất chiếu
-        bookingPage.selectShowTime();
+        movieDetailPage.selectShowTime();
 
         // Step 5: Chọn ghế
-        bookingPage.selectSeat();
-
+        bookingPage.selectSeat("42");//nhớ điền các ghế chưa bị đặt rồi
         // Step 6: Đặt vé
         bookingPage.clickBookTicket();
     }

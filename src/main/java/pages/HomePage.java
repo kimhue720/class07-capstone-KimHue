@@ -7,7 +7,7 @@ public class HomePage extends CommonPage {
 
     private By byLblUserProfile = By.xpath("//a[@href='/account']/h3");;
 
-    private By byFirstMovieCard = By.xpath("(//div[contains(@class,'ant-card')])[1]");
+    private By byFirstMovieCard = By.xpath("//div[contains(@style,'the-gentlemen_gp09')]");
 
     private By byMovieList = By.xpath("//div[contains(@class,'ant-card')]");
 
